@@ -12,3 +12,4 @@ WORKDIR "$PREFIX"
 RUN wget -O "$DCM4CHE_ZIPFILE" "https://downloads.sourceforge.net/project/dcm4che/dcm4che2/${DCM4CHE_VERSION}/${DCM4CHE_ZIPFILE}" \
     && unzip "$DCM4CHE_ZIPFILE" \
     && rm "$DCM4CHE_ZIPFILE"
+WORKDIR "$DCM4CHE_BASENAME"

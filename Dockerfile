@@ -12,3 +12,4 @@ RUN wget -O "$DCM4CHE_ZIPFILE" "https://downloads.sourceforge.net/project/dcm4ch
     && rm "$DCM4CHE_ZIPFILE"
 WORKDIR "$DCM4CHE_BASENAME"
 RUN find bin -iname '*.bat' -delete
+ENV PATH="${PATH}:${PREFIX}/${DCM4CHE_BASENAME}/bin"

@@ -47,7 +47,17 @@ These are all available tools:
     txt2dcmsr
     xml2dcm
 
-Run a tool directly:
+To get some help use the option `--help`:
+
+    root@b6b0369f96a2:/opt/dcm4che-2.0.29# dcmmwl --help
+    usage: dcmmwl <aet>[@<host>[:<port>]] [Options]
+    Query specified remote Application Entity (=Modality Worklist SCP) If
+    <port> is not specified, DICOM default port 104 is assumed. If also no
+    <host> is specified localhost is assumed.
+    Options:
+      ...
+
+Run a tool non-interactive:
 
     $ docker run --rm bjoernalbers/dcm4che2 dcmmwl --version
     dcmqr v2.0.29

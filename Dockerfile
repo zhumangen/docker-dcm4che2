@@ -1,6 +1,8 @@
 FROM williamyeh/java7
+RUN rm -f /etc/apt/sources.list
+COPY sources.list /etc/apt/
 RUN apt-get update \
-    && apt-get install -y unzip \
+    && apt-get install -y --force-yes unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 ENV PREFIX="/opt"
